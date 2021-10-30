@@ -6,7 +6,7 @@ from dotenv import load_dotenv
 
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
-bot = commands.Bot(self_bot=True)
+bot = commands.Bot(command_prefix=(">>>"), self_bot=True)
 
 @bot.event
 async def on_ready():
