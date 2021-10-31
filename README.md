@@ -8,6 +8,7 @@ I'M NOT RESPONIBLE IF YOUR ACCOUNT GETS DELETED/BANNED!
 
 # Setup
 
-1. Download files or clone the repository
-2. Rename .envsample to .env and paste the token
-3. Host the bot
+1. Download files or clone the repository.
+2. Edit config.sample.json to your liking, then save it as config.json.
+3. Rename .envsample to .env and paste the token.
+4. Host the bot.
