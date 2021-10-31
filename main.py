@@ -1,4 +1,4 @@
-mport os
+import os
 import asyncio
 import discord
 from discord.ext import commands
@@ -31,11 +31,11 @@ async def on_ready():
 if config["activity"] == True:
   @tasks.loop(seconds=40)
   async def my_background_task():
-    await bot.change_presence(status=discord.Status.dnd, activity=discord.Activi>
+    await bot.change_presence(status=discord.Status.dnd, activity=discord.Activity(type=discord.ActivityType.watching, name=(ACTIVITY1)))
     await asyncio.sleep(40)
-    await bot.change_presence(status=discord.Status.dnd, activity=discord.Activi>
+    await bot.change_presence(status=discord.Status.dnd, activity=discord.Activity(type=discord.ActivityType.watching, name=(ACTIVITY2)))
     await asyncio.sleep(40)
-    await bot.change_presence(status=discord.Status.dnd, activity=discord.Activi>
+    await bot.change_presence(status=discord.Status.dnd, activity=discord.Activity(type=discord.ActivityType.watching, name=(ACTIVITY3)))
 else:
   print("Not using activity")
 
