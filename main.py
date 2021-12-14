@@ -15,7 +15,7 @@ TOKEN = os.getenv('DISCORD_TOKEN')
 ACTIVITY1 = os.getenv('ACTIVITY1')
 ACTIVITY2 = os.getenv('ACTIVITY2')
 ACTIVITY3 = os.getenv('ACTIVITY3')
-TEST = os.getenv('TEST')
+
 bot = commands.Bot(command_prefix=(">>>"), self_bot=True)
 client = discord.Client()
 
