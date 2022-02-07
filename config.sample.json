@@ -1,3 +1,7 @@
 {
-    "activity" : true
+    "activity": true,
+    "_comment: "Activity change every 40 seconds"
+    "Activity1": "Activity 1",
+    "Activity2": "Activity 2",
+    "Activity3": "Activity 3"
 }
