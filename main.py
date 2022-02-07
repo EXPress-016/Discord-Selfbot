@@ -12,9 +12,9 @@ with open('./config.json', 'r') as cjson:
 
 load_dotenv()
 TOKEN = os.getenv('DISCORD_TOKEN')
-ACTIVITY1 = os.getenv('ACTIVITY1')
-ACTIVITY2 = os.getenv('ACTIVITY2')
-ACTIVITY3 = os.getenv('ACTIVITY3')
+ACTIVITY1 = config["Activity1"]
+ACTIVITY2 = config["Activity2"]
+ACTIVITY3 = config["Activity3"]
 
 bot = commands.Bot(command_prefix=(">>>"), self_bot=True)
 client = discord.Client()
@@ -29,13 +29,14 @@ async def on_ready():
     print("ID: " + str(bot.user.id))
 
 if config["activity"] == True:
-  @tasks.loop(seconds=40)
+  @tasks.loop(seconds=120)
   async def my_background_task():
     await bot.change_presence(status=discord.Status.dnd, activity=discord.Activity(type=discord.ActivityType.watching, name=(ACTIVITY1)))
     await asyncio.sleep(40)
     await bot.change_presence(status=discord.Status.dnd, activity=discord.Activity(type=discord.ActivityType.watching, name=(ACTIVITY2)))
     await asyncio.sleep(40)
     await bot.change_presence(status=discord.Status.dnd, activity=discord.Activity(type=discord.ActivityType.watching, name=(ACTIVITY3)))
+    await asyncio.sleep(40)
 else:
   print("Not using activity")
 
